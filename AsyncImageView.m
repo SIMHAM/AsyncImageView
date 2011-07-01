@@ -3,7 +3,6 @@
 //
 
 #import "AsyncImageView.h"
-#import "RequestHelper.h"
 
 @implementation AsyncImageView
 @synthesize loadingImage = loadingImage_;
@@ -98,14 +97,10 @@
     self.imageSlug = slug;
     self.tmpDirectory = [NSString stringWithFormat:@"%@%@.jpg", NSTemporaryDirectory(), slug];
     
-    RequestHelper *helper = [[RequestHelper alloc] init];
-    
-    self.request = [helper imageDownloadRequestWithURL:url];
+    self.request = [ASIHTTPRequest requestWithURL:[NSURL urlWithString:url]];
     [self.request setDelegate:self];
     [self.request setDownloadDestinationPath:self.tmpDirectory];
     [self.request startAsynchronous];
-    
-    [helper release];
 }
 
 #pragma mark -
