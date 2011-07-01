@@ -1,9 +1,5 @@
 //
-//  AsyncImageView.m
-//  Smorgie
-//
-//  Created by Frankie Laguna on 6/30/11.
-//  Copyright 2011 The Atom Group. All rights reserved.
+//  AsyncImageView.h
 //
 
 #import "AsyncImageView.h"
