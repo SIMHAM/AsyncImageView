@@ -1,0 +1,2 @@
+Use like a regular UIImageView, and run loadImageFromUrl: withSlug: to load the image.
+
